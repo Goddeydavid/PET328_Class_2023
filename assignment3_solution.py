@@ -15,7 +15,12 @@ h2o_comp = float(h2o_comp)
 gas_gravity = float(gas_gravity)
 
 # the if statement
-if co2_comp > 0.12 or n2_comp > 0.03 or h2s_comp > 0:
+# to switch the logical operator as requested:
+# to switch the logical operator as requested:
+    # change the '>' to '<=', 1 mark
+    # change the 'or' to 'and' 1 mark
+    # negate the entire condition using the 'not' operator 1 mark
+if not(co2_comp <= 0.12 and n2_comp <= 0.03 and h2s_comp <= 0):
     gas_gravity = (gas_gravity - (1.1767*h2s_comp) - \
                       (1.5196*co2_comp) - (0.9672*n2_comp) - \
                        (0.622*h2o_comp))/(1- h2s_comp - co2_comp - n2_comp - h2o_comp)
